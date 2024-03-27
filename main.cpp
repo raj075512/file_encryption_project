@@ -1,4 +1,6 @@
 #include<iostream>
+#include<fstream>
+#include<string>
 #include "encryption.h"
 
 using namespace std;
@@ -10,33 +12,35 @@ int main()
     char mode;
     
     cout<<"enter the filename: \n";
-    getline(cin >>ws, filename);
+    std::getline(cin>> ws , filename);
  
-    cout<<"Encrypt(e) or Decrypt(d) ? \n";
-    cin>>mode;
+    std::cout<<"Encrypt(e) or Decrypt(d) ? \n";
+    std::cin>>mode;
 
    if(mode=='e'|| mode =='E' )
    {
-      if(encryptFile(filename, true))
+      if(encryptfile(filename, true))
       {
-        cout<< " Encrption process successfully, completed ! \n";
+       std:: cout<< " Encrption process successfully, completed ! \n";
+
       }else{
         cerr<< "error :  unable to perform encryption \n";
+
       }
  
-   }else if(mode=='D' || mode =='D') {
+   }else if(mode=='d' || mode =='D') {
         
-        if(encryptFile(filename, false))
+        if(encryptfile(filename, false))
         {
-           cout<<" Decryption successfully , completed !\n";
+        std::   cout<<" Decryption successfully , completed !\n";
         }else
         {
-            cerr<<"unable to perform decryption\n";
+         std::   cerr<<"unable to perform decryption\n";
         }
 
    }else{
 
-      cerr<<"enter the correct action : Use 'e' for encrption or 'd' for decryption \n";
+    std::  cerr<<"enter the correct action : Use 'e' for encrption or 'd' for decryption \n";
 
    }
 

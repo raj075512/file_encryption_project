@@ -2,7 +2,7 @@
 #define ENCRYPTION_H
 #include <string>
 using namespace std;
-bool encryptFile(const string& filename , bool encryptFlag);
+bool encryptfile(const string& filename , bool encryptFlag);
 
 #endif   // Encryption_h 
 
